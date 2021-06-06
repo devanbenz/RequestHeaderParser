@@ -27,7 +27,7 @@ app.get("/api/hello", function (req, res) {
 
 app.get('/api/whoami', (req, res) => [
   res.status(200).json({
-    ipaddress: req.rawHeaders,
+    ipaddress: req.rawHeaders[23],
     language: req.rawHeaders[9],
     software: req.rawHeaders[5]
   })
